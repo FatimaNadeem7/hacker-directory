@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Talen Mudaly — hacker directory</title>
-  <meta name="description" content="Talen Mudaly's personal page — CS & Maths student, MCMC samplers, open source." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>" />
+  <title>Fatima Nadeem — hacker directory</title>
+  <meta name="description" content="Your personal page in the hacker directory." />
+  <!--
+    Hey! This is YOUR page. The stylesheet below gives you the site's
+    dark/light theme + fonts for free, but you don't have to use any of it —
+    delete the whole <body> and build something completely different if
+    you want. Games, art, a terminal, a blog, whatever. Go wild.
+  -->
   <link rel="stylesheet" href="../../assets/style.css" />
   <link rel="stylesheet" href="styles.css" />
   <script src="../../assets/theme.js"></script>
@@ -25,79 +30,314 @@
     </div>
   </nav>
 
-  <main class="wrap">
-    <div class="profile-hero">
-      <img class="profile-avatar" src="https://github.com/TalenMud.png?size=192" alt="Talen Mudaly" onerror="this.style.display='none'" />
-      <div>
-        <h1 class="profile-name">Talen Mudaly</h1>
-        <p class="profile-meta">CS & Maths Student · University of Manchester · @TalenMud</p>
-        <p class="profile-bio">
-          Building MCMC samplers in CUDA, open source contributor, MLH coach.
-          Founder of UoM Open Source Society. I like distributions that are hard
-          to sample from and code that runs on GPUs it probably shouldn't.
-        </p>
-        <div class="pills" style="margin-top:0.8rem;">
-          <span class="pill" data-pill="python">Python</span>
-          <span class="pill" data-pill="cpp">C++</span>
-          <span class="pill" data-pill="cuda">CUDA</span>
-          <span class="pill" data-pill="react">React</span>
-          <span class="pill" data-pill="oss">Open Source</span>
-          <span class="pill" data-pill="bayes">Bayesian Stats</span>
-        </div>
-        <div class="links-row">
-          <a class="btn btn-outline" href="https://talenmud.github.io" target="_blank" rel="noopener">Website ↗</a>
-          <a class="btn btn-outline" href="https://github.com/TalenMud" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
-      </div>
+  <main class="wrap" style="padding-top: 3rem; padding-bottom: 4rem;">
+    <h1 style="font-family: var(--font-goofy); font-size: 2.3rem; margin-bottom: 0.4rem;">Fatima Nadeem</h1>
+    <p style="color: var(--text-secondary); margin-top: 0;">Data Science undergrad | Punjab University of Information Technology| github @FatimaNadeem7</p>
+
+    <p style="max-width: 620px; line-height: 1.6; color: var(--text-secondary);">
+      Hi! I am a Data Science undergrad and constantly searching for oppurtunities that will increase my exposure and network. I am interested in content creation, volunteering, reading, learning new languages and participating in various activities including sports.
+    </p>
+
+    <div class="pills" style="margin: 1.2rem 0;">
+      <span class="pill" style="--pill-color:#4B0082">Data Science</span>
+      <span class="pill" style="--pill-color:#C2185B">Game development</span>
+     
     </div>
 
-    <section class="block">
-      <h2>Metropolis&#8211;Hastings, live</h2>
-      <div class="viz-panel">
-        <p class="caption">
-          A little demo of what you can build on your own page. This is a real
-          Metropolis&#8211;Hastings sampler exploring a 2D mixture-of-Gaussians
-          target distribution — the walker proposes a random step, accepts it with
-          probability <code>min(1, p(x')/p(x))</code>, and rejects otherwise. Warmer
-          cells in the heatmap mean the chain has spent more time there, which is
-          exactly where the true density is highest.
-        </p>
-        <div id="mcmc-canvas-wrap"></div>
-        <div class="viz-controls">
-          <button id="mcmc-reset">restart chain</button>
-          <button id="mcmc-speed">speed: 1×</button>
-          <span class="stat-chip">steps: <span id="mcmc-steps">0</span></span>
-          <span class="stat-chip">accepted: <span id="mcmc-accepted">0</span></span>
-          <span class="stat-chip">acceptance rate: <span id="mcmc-rate">–</span></span>
-        </div>
-      </div>
-    </section>
+    <div style="display:flex; gap:0.7rem; flex-wrap: wrap;">
+      <a class="btn btn-outline" href="https://github.com/FatimaNadeem7" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/fatima-nadeem-ab2a813b1" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
 
-    <section class="block">
-      <h2>Currently building</h2>
-      <ul class="project-list">
-        <li>
-          <strong>gpu-mcmc</strong>
-          <span>Parallel Metropolis-Hastings and HMC samplers written in raw CUDA, benchmarked against Stan.</span>
-        </li>
-        <li>
-          <strong>UoM Open Source Society</strong>
-          <span>Founded and run the university's first open source society — workshops, hack nights, first-PR onboarding.</span>
-        </li>
-        <li>
-          <strong>MLH Coach</strong>
-          <span>Coaching student hackathon organisers across the Major League Hacking network.</span>
-        </li>
-      </ul>
+    <section style="margin-top: 3rem;">
+      <h2 style="font-family: var(--font-goofy); font-size: 1.45rem;">Have a break from scrolling:)</h2>
+      <p style="color: var(--text-secondary); max-width: 620px; line-height: 1.6;">
+        <div class="game-card">
+  <h3>🟡 Dot Muncher</h3>
+  <p class="game-sub">Arrow keys or WASD. Eat all the dots, dodge the ghosts!</p>
+  <canvas id="gameCanvas" width="320" height="320"></canvas>
+  <div class="game-hud">
+    <span id="score">Score: 0</span>
+    <span id="timer">Time: 60</span>
+    <button id="resetBtn">Restart</button>
+  </div>
+  <p id="status" class="game-status"></p>
+</div>
+ 
+<style>
+  .game-card {
+    max-width: 340px;
+    margin: 20px auto;
+    padding: 16px;
+    border-radius: 12px;
+    background: #c8a2c8;
+    color: #3b1e50;
+    text-align: center;
+    font-family: system-ui, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  .game-sub { font-size: 13px; color: #5a3d6b; margin: 4px 0 10px; }
+  #gameCanvas { background: #faf6ef; border-radius: 8px; display: block; margin: 0 auto; }
+  .game-hud {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 10px; font-size: 13px; gap: 8px; color: #3b1e50;
+  }
+  .game-hud button {
+    background: #4b1f6b; color: #faf6ef; border: none; padding: 6px 12px; border-radius: 6px;
+    font-weight: bold; cursor: pointer; font-size: 13px;
+  }
+  .game-hud button:hover { background: #5e2a84; }
+  .game-status { min-height: 18px; margin-top: 8px; font-weight: bold; font-size: 14px; color: #3b1e50; }
+</style>
+ 
+<script>
+(function () {
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+  const scoreEl = document.getElementById('score');
+  const timerEl = document.getElementById('timer');
+  const statusEl = document.getElementById('status');
+  const resetBtn = document.getElementById('resetBtn');
+ 
+  const cols = 16, rows = 16, cellSize = canvas.width / cols;
+  const GHOST_COLORS = ['#ff3355', '#33ccff', '#ff9900'];
+  const START_TIME = 60;
+ 
+  let grid, player, ghosts, score, timeLeft, gameOver, facing;
+  let ghostInterval, timerInterval;
+ 
+  function buildGrid() {
+    const g = Array.from({ length: rows }, () => Array(cols).fill(0));
+    for (let x = 0; x < cols; x++) { g[0][x] = 1; g[rows - 1][x] = 1; }
+    for (let y = 0; y < rows; y++) { g[y][0] = 1; g[y][cols - 1] = 1; }
+    for (let i = 0; i < 30; i++) {
+      const x = 1 + Math.floor(Math.random() * (cols - 2));
+      const y = 1 + Math.floor(Math.random() * (rows - 2));
+      if (!(x === 1 && y === 1)) g[y][x] = 1;
+    }
+    return g;
+  }
+ 
+  function openCell(x, y) {
+    return grid[y] && grid[y][x] !== 1;
+  }
+ 
+  function spawnGhosts() {
+    const spots = [
+      { x: cols - 2, y: rows - 2 },
+      { x: cols - 2, y: 1 },
+      { x: 1, y: rows - 2 },
+    ];
+    return spots.map((s, i) => ({ ...s, color: GHOST_COLORS[i] }));
+  }
+ 
+  function init() {
+    clearInterval(ghostInterval);
+    clearInterval(timerInterval);
+ 
+    grid = buildGrid();
+    player = { x: 1, y: 1 };
+    grid[1][1] = 2;
+    facing = { dx: 1, dy: 0 };
+    ghosts = spawnGhosts();
+    score = 0;
+    timeLeft = START_TIME;
+    gameOver = false;
+    statusEl.textContent = '';
+    scoreEl.textContent = 'Score: 0';
+    timerEl.textContent = 'Time: ' + timeLeft;
+ 
+    ghostInterval = setInterval(moveGhosts, 450);
+    timerInterval = setInterval(tickTimer, 1000);
+    draw();
+  }
+ 
+  function tickTimer() {
+    if (gameOver) return;
+    timeLeft--;
+    timerEl.textContent = 'Time: ' + timeLeft;
+    if (timeLeft <= 0) endGame("Time's up! Score: " + score);
+  }
+ 
+  function totalDots() {
+    let n = 0;
+    for (let y = 0; y < rows; y++)
+      for (let x = 0; x < cols; x++)
+        if (grid[y][x] === 0) n++;
+    return n;
+  }
+ 
+  function move(dx, dy) {
+    if (gameOver) return;
+    const nx = player.x + dx, ny = player.y + dy;
+    if (openCell(nx, ny)) {
+      player.x = nx;
+      player.y = ny;
+      facing = { dx, dy };
+      if (grid[ny][nx] === 0) {
+        grid[ny][nx] = 2;
+        score += 10;
+        scoreEl.textContent = 'Score: ' + score;
+      }
+      checkGhostCollision();
+      if (!gameOver && totalDots() === 0) endGame('You win! Score: ' + score);
+    }
+    draw();
+  }
+ 
+  function moveGhosts() {
+    if (gameOver) return;
+    ghosts.forEach(g => {
+      const options = [
+        { dx: 1, dy: 0 }, { dx: -1, dy: 0 }, { dx: 0, dy: 1 }, { dx: 0, dy: -1 },
+      ].filter(d => openCell(g.x + d.dx, g.y + d.dy));
+ 
+      if (options.length) {
+        // 60% chase player (simple greedy step), 40% random wander
+        let choice;
+        if (Math.random() < 0.6) {
+          options.sort((a, b) => {
+            const da = Math.abs((g.x + a.dx) - player.x) + Math.abs((g.y + a.dy) - player.y);
+            const db = Math.abs((g.x + b.dx) - player.x) + Math.abs((g.y + b.dy) - player.y);
+            return da - db;
+          });
+          choice = options[0];
+        } else {
+          choice = options[Math.floor(Math.random() * options.length)];
+        }
+        g.x += choice.dx;
+        g.y += choice.dy;
+      }
+    });
+    checkGhostCollision();
+    draw();
+  }
+ 
+  function checkGhostCollision() {
+    if (gameOver) return;
+    if (ghosts.some(g => g.x === player.x && g.y === player.y)) {
+      endGame('Caught! Score: ' + score);
+    }
+  }
+ 
+  function endGame(message) {
+    gameOver = true;
+    clearInterval(ghostInterval);
+    clearInterval(timerInterval);
+    statusEl.textContent = message;
+  }
+ 
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+ 
+    for (let y = 0; y < rows; y++) {
+      for (let x = 0; x < cols; x++) {
+        const cell = grid[y][x];
+        const px = x * cellSize, py = y * cellSize;
+        if (cell === 1) {
+          ctx.fillStyle = '#4b1f6b';
+          ctx.fillRect(px, py, cellSize, cellSize);
+        } else if (cell === 0) {
+          ctx.fillStyle = '#4b1f6b';
+          ctx.beginPath();
+          ctx.arc(px + cellSize / 2, py + cellSize / 2, 2.5, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+    }
+ 
+    ghosts.forEach(g => drawGhost(g));
+    drawPlayer();
+  }
+ 
+  function angleForFacing() {
+    if (facing.dx === 1) return 0;
+    if (facing.dx === -1) return Math.PI;
+    if (facing.dy === 1) return Math.PI / 2;
+    if (facing.dy === -1) return -Math.PI / 2;
+    return 0;
+  }
+ 
+  function drawPlayer() {
+    const cx = player.x * cellSize + cellSize / 2;
+    const cy = player.y * cellSize + cellSize / 2;
+    const r = cellSize / 2 - 2;
+    const angle = angleForFacing();
+ 
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(angle);
+ 
+    ctx.fillStyle = '#ff4fa3';
+    ctx.beginPath();
+    ctx.arc(0, 0, r, 0.25 * Math.PI, 1.75 * Math.PI);
+    ctx.lineTo(0, 0);
+    ctx.fill();
+ 
+    ctx.rotate(-angle);
+    ctx.fillStyle = '#3b1e50';
+    ctx.beginPath();
+    ctx.arc(-2, -r * 0.55, r * 0.16, 0, Math.PI * 2);
+    ctx.fill();
+ 
+    ctx.restore();
+  }
+ 
+  function drawGhost(g) {
+    const px = g.x * cellSize, py = g.y * cellSize;
+    const cx = px + cellSize / 2, cy = py + cellSize / 2;
+    const r = cellSize / 2 - 2;
+ 
+    ctx.fillStyle = g.color;
+    ctx.beginPath();
+    ctx.arc(cx, cy - r * 0.15, r, Math.PI, 0);
+    ctx.lineTo(cx + r, cy + r * 0.7);
+    const waves = 3;
+    for (let i = 0; i < waves; i++) {
+      const wx = cx + r - (2 * r / waves) * (i + 0.5);
+      ctx.lineTo(wx, cy + r * (i % 2 === 0 ? 0.4 : 0.7));
+    }
+    ctx.lineTo(cx - r, cy + r * 0.7);
+    ctx.closePath();
+    ctx.fill();
+ 
+    ctx.fillStyle = '#fff';
+    ctx.beginPath();
+    ctx.arc(cx - r * 0.35, cy - r * 0.15, r * 0.22, 0, Math.PI * 2);
+    ctx.arc(cx + r * 0.35, cy - r * 0.15, r * 0.22, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = '#003366';
+    ctx.beginPath();
+    ctx.arc(cx - r * 0.3, cy - r * 0.15, r * 0.1, 0, Math.PI * 2);
+    ctx.arc(cx + r * 0.4, cy - r * 0.15, r * 0.1, 0, Math.PI * 2);
+    ctx.fill();
+  }
+ 
+  window.addEventListener('keydown', (e) => {
+    const keyMap = {
+      ArrowUp: [0, -1], w: [0, -1], W: [0, -1],
+      ArrowDown: [0, 1], s: [0, 1], S: [0, 1],
+      ArrowLeft: [-1, 0], a: [-1, 0], A: [-1, 0],
+      ArrowRight: [1, 0], d: [1, 0], D: [1, 0],
+    };
+    if (keyMap[e.key]) {
+      e.preventDefault();
+      move(...keyMap[e.key]);
+    }
+  });
+ 
+  resetBtn.addEventListener('click', init);
+ 
+  init();
+})();
+</script>
+       
+      </p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    This is my page in the <a href="../../index.html">hacker directory</a> — make your own in a PR.
-  </footer>
+ 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
-  <script src="mcmc.js"></script>
   <script>HDTheme.init();</script>
 </body>
 </html>
